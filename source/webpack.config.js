@@ -99,6 +99,7 @@ const getDirectoryEntries = async () => {
   const generatedEntries = {}
 
   const chapters = [
+    'taiga',
     'chapter-1',
     'chapter-2',
     'chapter-3',
