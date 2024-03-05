@@ -226,7 +226,8 @@ function animate() {
         if (len > 1) {
             pochitaModel.scene.position.x += dx / factor;
             pochitaModel.scene.position.z += dz / factor;
-            pochitaModel.scene.rotation.y = dx / Math.abs(dx) * Math.atan(dz/dx) - Math.PI / 2;
+            pochitaModel.scene.rotation.y = -(Math.atan(dz/dx) - Math.PI / 2);
+            if (dx/Math.abs(dx) < 0) pochitaModel.scene.rotation.y -= Math.PI;
         }
     };
 }
